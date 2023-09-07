@@ -1,0 +1,149 @@
+// 경로
+$base_img_url:"/assets/images/";
+// 컬러
+$black:#000;
+$grayscale01 : #0B0C0D;
+$grayscale02 : #232526;
+$grayscale03 : #727273;
+$grayscale04 : #A4A5A6;
+$grayscale05 : #F2F2F2;
+$white:#fff;
+
+@mixin title() {
+    color: black;
+    font-size: 36px;
+}
+body{
+    position: relative;
+    font-family: "TheJamsil3Regular";
+    font-weight: 400;
+    header{
+        height: 80px;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        .logo{
+            @include title();
+        }
+        nav{
+            border: 1px solid black;
+            width: 500px;
+            height: 60px;
+        }
+    }
+    main{
+        width: 100%;
+        height: 100vh;
+        padding-top: 80px;
+        box-sizing: border-box;
+        background-color: #F2F2F2;
+        display: flex;
+        justify-content: center;
+        aside{
+            height: 100%;
+            width: 200px;
+            &:nth-of-type(1){
+                background-color: #A4A5A6;
+            }
+            &:nth-of-type(2){
+                background-color: #A4A5A6;
+            }
+        }
+        section{
+            width: 1200px;
+            height: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            .content-box{
+                // border: 1px solid black;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+                border-radius: 8px;
+                background-color: #fff;
+                padding: 8px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                >div{
+                    padding: 4px;
+                }
+                .content-header{
+                    // border: 1px solid black;
+                    padding: 8px;
+                    h2{
+                        font-size: 26px;
+                        font-weight: 900;
+                    }
+                }
+                .content-body{
+                    // border: 1px solid black;
+                    padding: 16px;
+                    .content-item{
+                        padding: 16px 8px;
+                        margin: 8px 0;
+                        box-shadow: 0 0 4px rgba(0,0,0,0.25);
+                        border-radius: 8px;
+                        .content-text-box{                          
+                            h3{
+                                font-size: 18px;
+                                font-family: "TheJamsil2Light";
+                                margin-bottom: 8px;
+                            }
+                            p{
+                                font-size: 16px;
+                                font-family: 'TheJamsil1Thin';
+                                line-height: 21px;
+                            }
+                        }
+                        .codebox{
+                            margin: 8px 0;
+                            border-radius: 8px;
+                            background-color: #333;
+                            color: #fcfcfc;
+                            overflow: hidden;
+                            box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+                            h4{
+                                padding: 4px;
+                                background-color: rgba(0,0,45,1);
+                            }
+                        }
+                        table{
+                            margin: 0 auto;
+                            padding: 8px;
+                            min-width: 400px;
+                            thead{
+                                background-color: rgba(0,0,45,1);
+                                color: #fcfcfc;
+                                td{
+                                    padding: 8px;
+                                    font-size: 18px;
+                                    font-family: "TheJamsil2Light";
+                                    border-radius: 4px;
+                                }
+                            }
+                            tbody{
+                                td{
+                                    padding: 8px;
+                                    font-size: 16px;
+                                    border-radius: 4px;
+                                    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+                                }
+                            }
+                        }
+                    }
+                }
+                .content-footer{
+                    // border: 1px solid black;
+                }
+            }
+        }
+    }
+    footer{
+    }
+}
